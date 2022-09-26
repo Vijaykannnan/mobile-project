@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile purchase</title>
+  <!------cssss----------->
+
+
+  <!---bootstrap---->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+  <!--------google fonts------->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap" rel="stylesheet">
+
+
+
+  <!-----fontawesome icons----->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https:
+    //pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+     crossorigin="anonymous" />
+
+  <!----stylecsss------->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    nav {
+      font-family: 'Oswald', sans-serif;
+    }
+
+    footer {
+      font-family: 'Averia Serif Libre', cursive;
+
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    header {
+      background: url('./img/work.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+
+    header:before {
+      content: '';
+      position: absolute;
+      background: linear-gradient(#292E49, #292E49);
+      opacity: 0.9;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    section .btn1 {
+      outline: none;
+      border: 1px solid #fff;
+      border-radius: 30px;
+      color: #fff;
+      background-color: transparent;
+      padding: 10px;
+      font-family: 'Staatliches', cursive;
+      font-size: 20px;
+      margin-left: 10px;
+
+    }
+
+    section .p1 {
+      color: #fff;
+      font-size: 40px;
+      font-family: 'Permanent Marker', cursive;
+
+    }
+
+    section .h1 {
+      color: #44A08D;
+      font-size: 60px;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    section .h2,
+    .p2 {
+      color: #fff;
+      font-family: 'Averia Serif Libre', cursive;
+    }
+
+    .h2 {
+      font-size: 60px;
+      font-variant: small-caps;
+    }
+
+    .p2 {
+      font-size: 20px !important;
+    }
+
+    section .btn2 {
+      background-color: transparent;
+      outline: none;
+      border: 1px solid #fff;
+      padding: 10px;
+      border-radius: 20px;
+      font-family: 'Averia Serif Libre', cursive;
+      font-size: 20px;
+
+    }
+
+    .thirdpage {
+      color: #fff;
+      margin-top: 90px;
+    }
+
+    .icon1,
+    .icon2,
+    .icon3,
+    .icon4,
+    .icon5,
+    .icon6,
+    .icon7,
+    .icon8,
+    .icon9,
+    .icon10,
+    .icon11 {
+      width: 40px;
+      height: 40px;
+      background-color: #007991;
+      position: relative;
+      text-align: center;
+      /* margin: auto; */
+      margin-right: 50px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      transform: skew(20deg) rotatex(20deg);
+    }
+
+
+    .i {
+      margin-top: 10px;
+      font-size: 25px;
+    }
+
+    .icon1:before,
+    .icon2:before,
+    .icon3:before,
+    .icon4:before,
+    .icon5:before,
+    .icon6:before,
+    .icon7:before,
+    .icon8:before,
+    .icon9:before,
+    .icon10:before,
+    .icon11:before {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 41px;
+      background-color: #fff;
+      left: -15px;
+      top: 7px;
+      transform: skew(0, -40deg);
+    }
+
+    .icon1:after,
+    .icon2:after,
+    .icon3:after,
+    .icon4:after,
+    .icon5:after,
+    .icon6:after,
+    .icon7:after,
+    .icon8:after,
+    .icon9:after,
+    .icon10:after,
+    .icon11:after {
+      content: '';
+      position: absolute;
+      width: 43px;
+      height: 15px;
+      background-color: #fff;
+      top: 40px;
+      left: -9px;
+      transform: skew(-40deg, 0);
+    }
+
+    .soc-img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .h3 {
+      font-weight: 600;
+      font-size: 40px;
+      margin-left: -8px;
+      font-family: 'Monoton', cursive;
+
+
+    }
+
+    .promocode {
+      color: #EECDA3;
+    }
+
+    .d1:hover,
+    .d2:hover,
+    .btn2:hover {
+      color: #fff;
+      font-weight: 700;
+      box-shadow: 2px 2px 12px;
+    }
+
+    .icon1:hover,
+    .icon2:hover,
+    .icon3:hover,
+    .icon4:hover,
+    .icon5:hover,
+    .icon6:hover,
+    .icon7:hover,
+    .icon8:hover,
+    .icon9:hover,
+    .icon10:hover,
+    .icon11:hover {
+      background-color: #EF629F;
+      transform: scale(1);
+    }
+
+
+
+
+
+
+
+
+
+
+    /* @media all and (max-width:600px) { */
+    section .h1 {
+      text-align: center;
+    }
+
+    .fpage {
+      margin-top: 100px;
+      margin-left: 10px;
+    }
+
+    section .btn1 {
+      /* margin-top: 140px; */
+      margin-left: 60px !important;
+
+    }
+
+    .loader {
+      /* margin-left: 40px;
+      margin-top: -320px; */
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      display: none;
+    }
+
+    section .h2 {
+      margin-top: 55px;
+      text-align: center;
+    }
+
+    section .p2 {
+      margin-top: 30px;
+      text-align: center;
+      line-height: 34px;
+      margin-bottom: 35px;
+    }
+
+    section .btn2 {
+      margin-left: 55px;
+      margin-bottom: 73px;
+      width: 260px;
+    }
+
+    .icon1,
+    .icon2,
+    .icon3,
+    .icon4,
+    .icon5,
+    .icon6,
+    .icon7,
+    .icon8,
+    .icon9,
+    .icon10,
+    .icon11 {
+      margin-bottom: 41px;
+    }
+
+    .thirdpage {
+      padding-bottom: 130px;
+    }
+
+    .h3 {
+      text-align: center;
+      margin-bottom: 35px;
+
+    }
+
+    .icon1,
+    .icon5,
+    .icon9 {
+      margin-left: 48px;
+    }
+
+
+    .product h4 {
+      /* margin-left: 130px; */
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+
+    .product .col-md-6 {
+      margin-bottom: 20px;
+    }
+
+    .brand {
+      /* margin-left: 30px; */
+      width: 100% !important;
+      margin: auto !important;
+      /* text-align: center; */
+    }
+
+    .allskills {
+      padding: 10px;
+      width: 100% !important;
+    }
+
+    .skill {
+      width: 90% !important;
+    }
+
+    .samsung {
+      width: 90% !important;
+      animation: sam 4s linear;
+    }
+
+    .redmi {
+      width: 50% !important;
+      animation: red 4s linear;
+    }
+
+
+    .vivo {
+      width: 70% !important;
+      animation: vivo 4s linear;
+    }
+
+
+    .oppo {
+      width: 30% !important;
+      animation: oppo 4s linear;
+    }
+
+    .apple {
+      width: 80% !important;
+      animation: app 4s linear;
+    }
+
+    .allskills {
+      border-top: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+      box-shadow: 30px 20px 60px #ccc;
+    }
+
+    .round1,
+    .round2,
+    .round3 {
+      border: 1px solid;
+      padding: 4px;
+      margin-bottom: 30px;
+      width: 300px;
+      margin-left: 5%;
+      border-radius: 20px;
+      color: #fff;
+      background-color: #D66D75;
+      box-shadow: 10px 10px 20px #ccc;
+    }
+
+    .stack {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    #help {
+      margin: auto;
+      /* margin-left: -30px; */
+    }
+
+    .round1 .fa,
+    .round2 .fa,
+    .round3 .fa {
+      font-size: 50px;
+      position: relative;
+      left: 130px;
+      margin-bottom: 20px;
+    }
+
+    .round1 h4,
+    p,
+    .round2 h4,
+    p,
+    .round3 h4,
+    p {
+      text-align: center;
+    }
+
+    footer .about {
+      margin-top: 50px;
+    }
+
+    footer .copyrights {
+      margin-top: 40px;
+    }
+
+    /* } */
+
+
+    .round1,
+    .round2,
+    .round3 {
+      border: 1px solid;
+      padding: 10px;
+      /* margin-left: 50px; */
+      border-radius: 20px;
+      margin-bottom: 40px;
+      color: #fff;
+      background-color: #D66D75;
+      box-shadow: 10px 10px 20px #ccc;
+    }
+
+    /* @media all and (min-width:480px) { */
+    section .h1 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    section .p1 {
+      margin-bottom: 50px;
+    }
+
+    section .btn1 {
+      text-align: center;
+      /* margin-bottom: 55px; */
+      margin-left: 20px;
+    }
+
+    section .h2 {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    section .p2 {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 35px;
+      line-height: 44px;
+    }
+
+    section .btn2 {
+      margin-left: 150px;
+      margin-bottom: 45px;
+      width: 330px;
+      font-size: 20px;
+    }
+
+    .h3 {
+      margin-bottom: 20px;
+
+      text-align: center;
+    }
+
+    .carousel-control-prev {
+      position: absolute;
+      left: -40px;
+    }
+
+    .carousel-control-next {
+      position: absolute;
+      right: -6px;
+    }
+
+    .icon5 {
+      margin-left: -3px;
+    }
+
+    .thirdpage {
+      margin-top: px;
+    }
+
+    .icon1,
+    .icon6,
+    .icon11 {
+      margin-left: 30px;
+    }
+
+    .icon6,
+    .icon7,
+    .icon8,
+    .icon9.icon10 {
+
+      margin-bottom: 100px;
+    }
+
+    .icon1,
+    .icon2,
+    .icon3,
+    .icon4.icon5 {
+
+      margin-bottom: 50px;
+    }
+
+    .product h4 {
+      text-align: center;
+      /* margin-left: 250px; */
+      margin-bottom: 10px;
+      font-size: 40px;
+    }
+
+    .soc-img {
+      width: 350px;
+      height: 350px;
+      position: absolute;
+      right: 3px;
+      top: 20px;
+      opacity: 0.5;
+    }
+
+    .brand h4 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .skill {
+      width: 700px;
+    }
+
+    .stack {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .round1 .fa,
+    .round2 .fa,
+    .round3 .fa {
+      font-size: 50px;
+      position: relative;
+      left: 60px;
+      margin-bottom: 10px;
+    }
+
+    .round1 h4,
+    p,
+    .round2 h4,
+    p,
+    .round3 h4,
+    p {
+      text-align: center;
+    }
+
+    .samsung {
+      width: 680px;
+      animation: sam 4s linear;
+    }
+
+    @keyframes sam {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 680px;
+      }
+    }
+
+
+    .redmi {
+      width: 380px;
+      animation: red 4s linear;
+    }
+
+    @keyframes red {
+      0% {
+        width: 0;
+      }
+
+      50% {
+        width: 200px;
+      }
+
+      100% {
+        width: 380px;
+      }
+    }
+
+
+    .vivo {
+      width: 650px;
+      animation: vivo 4s linear;
+    }
+
+    @keyframes vivo {
+      0% {
+        width: 0;
+      }
+
+      50% {
+        width: 250px;
+      }
+
+      100% {
+        width: 650px;
+      }
+    }
+
+    .oppo {
+      width: 150px;
+      animation: oppo 4s linear;
+    }
+
+    @keyframes oppo {
+      0% {
+        width: 0;
+      }
+
+      50% {
+        width: 80px;
+      }
+
+      100% {
+        width: 150px;
+      }
+    }
+
+    .apple {
+      width: 670px;
+      animation: app 4s linear;
+    }
+
+    @keyframes app {
+      0% {
+        width: 0;
+      }
+
+      50% {
+        width: 250px;
+      }
+
+      100% {
+        width: 670px;
+      }
+    }
+
+    .allskills {
+      width: 750px;
+      border-right: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      padding: 20px 0px 10px 25px;
+      box-shadow: 20px 20px 40px #ccc;
+    }
+
+
+
+    footer .copyrights {
+      margin-top: 50px;
+    }
+
+    /* } */
+
+
+
+    .icon11 {
+      display: none;
+    }
+
+    .skill {
+      height: 20px;
+
+      background-color: lightgray;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .skill_percent {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      background: linear-gradient(to right, #B24592, #F15F79);
+      border-radius: 10px;
+    }
+
+    .skill_view {
+
+      position: absolute;
+      left: 100%;
+      background-color: #000;
+      line-height: 20px;
+      font-size: 14px;
+      padding: 0 5px;
+      border-radius: 5px;
+      margin-top: -25px;
+      color: #fff;
+      margin-left: -20px;
+    }
+
+    .skill_view:after {
+
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translatex(-50%);
+      border-top: 5px solid #000;
+      border-right: 6px solid transparent;
+      border-left: 6px solid transparent;
+    }
+
+
+    .sup {
+      color: #fff;
+    }
+
+    footer {
+      padding: 30px;
+    }
+
+    footer .about {
+      text-align: center;
+    }
+
+    .input-group-text {
+      color: #fff;
+      background-color: red;
+      border: none;
+    }
+
+
+    @media all and (max-width:430px) {
+
+      .loader,
+      .soc-img {
+        display: none !important;
+      }
+
+      .h2 {
+        font-size: 40px !important;
+      }
+
+      .h1 {
+        font-size: 50px !important;
+      }
+
+      .p1 {
+        font-size: 26px !important;
+      }
+
+      .p2 {
+        font-size: 16px !important;
+
+      }
+
+      .btn1 {
+        position: relative;
+        bottom: 10px;
+      }
+
+      .icon9,
+      .icon10,
+      .icon11 {
+        display: none;
+      }
+
+    }
+
+    @media all and (max-width:375px) {
+
+      .h3 {
+        font-size: 10px !important;
+        column-rule: green !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!----header-------------->
+  <header id="top">
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          Tvl Mobiles
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">Brands
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#mobilebrand">Mobile brand</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#stack">Stacks</a>
+                </li>
+
+              </ul>
+            </li>
+            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">Help
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#help">24×7</a>
+                </li>
+        </div>
+      </div>
+    </nav>
+    <!----End header-------------->
+
+    <!---section------->
+    <section>
+
+
+      <!--------carosalstart----->
+      <div class="container">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators"> <button type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button> <button
+              type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button> <button type="button" data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2" aria-label="Slide 3"></button> </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row fpage">
+                <div class="col-sm-7 my-2">
+
+                  <!---offers------->
+                  <h1 class="h1">Offers!</h1>
+                  <p class="p1">discount for every mobiles!</p>
+                  <button class="btn1 d1"><a href="/"><i class="fa fa-shopping-cart me-2"></i>shop Now</a></button>
+                  <button class="btn1 d2"><a href="/"><i class="fa fa-tag me-2"></i>Add to Cart</a></button>
+                </div>
+
+
+                <div class="col-sm-5 my-5">
+
+                  <!---img------->
+                  <img src="./img/loader.gif" alt="loader" width="200" height="200" style="opacity:0.7;"
+                    class="loader d-block">
+                </div>
+
+              </div>
+            </div>
+
+
+            <div class="carousel-item thirdpage">
+
+              <div class="row">
+
+                <div class="col-md-8">
+                  <h2 class="h3">Follow Our Pages! for updates..</h2>
+                  <div class="row">
+                    <div class="col-md-3 icon1">
+                      <a href="/">
+                        <i class="fa fa-facebook-f i"></i></a>
+                    </div>
+                    <div class="col-md-3 icon2">
+                      <a htef="/"><i class="fa fa-whatsapp i"></i></a>
+                    </div>
+                    <div class="col-md-3 icon3">
+                      <a href="/"><i class="fa fa-instagram i"></i></a>
+                    </div>
+
+                    <div class="col-md-3 icon4">
+                      <a hred="/"><i class="fa fa-twitter i"></i></a>
+                    </div>
+                    <div class="col-md3- icon5">
+                      <a href="/"><i class="fa fa-telegram i"></i></a>
+                    </div>
+
+                    <div class="col-md-3 icon6">
+                      <a href="/"><i class="fa fa-envelope i"></i></a>
+                    </div>
+
+                    <div class="col-md-3 icon7">
+                      <a href="/"><i class="fa fa-linkedin i"></i></a>
+                    </div>
+                    <div class="col-md-3 icon8">
+                      <a href="/"><i class="fa fa-pinterest-p i"></i></a>
+                    </div>
+                    <div class="col-md-3 icon9">
+                      <a href="/"><i class="fa fa-youtube i"></i></a>
+                    </div>
+
+                    <div class="col-md-3 icon10">
+                      <a href="/"><i class="fa fa-phone i"></i></a>
+                    </div>
+                    <div class="col-md-3 icon11">
+                      <a href="/"><i class="fa fa-map-marker i"></i></a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-3 hide">
+                  <img src="./img/link.jpg" alt="social medias" class="soc-img"></img>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="carousel-item secondpage">
+              <!---offers------->
+              <h1 class="h2">All brands available</h1>
+              <p class="p2">In Our shops we have all bands,we got an 4.5 ratings so trust and purchase subscribe it for
+                Notification ,we have an offers nline and got within 24hrs,and all mobiles are 1 year grantices and all
+                are use an promo code In Our shops we have all bands,we got an 4.5 ratings so trust and purchase
+                subscribe it for
+                Notification ,we have an offers nline and got within 24hrs,and all mobiles are 1 year grantices and all
+                are use an promo code In Our shops we have all bands,we got an 4.5 ratings so trust and purchase
+                subscribe it for
+                Notification ,we have an offers nline and got within 24hrs,and all mobiles are 1 year grantices and all
+                are use an promo code <span class="promocode">vksite22</span> and enjoy your cashback for every mobiles
+              </p>
+              <button class="btn2"><a href="/"><i class="fa fa-shopping-cart me-2"></i>Subscribe</a></button>
+
+            </div>
+
+          </div>
+    </section>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span>
+    </button> <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+      data-bs-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span
+        class="visually-hidden">Next</span> </button>
+  </header>
+
+  <!-- end section------>
+
+  <!-------main-------->
+  <main>
+    <div class="container product my-5">
+      <h4 id="mobilebrand">Top Brands</h4>
+      <div class="row brand mb-4">
+        <div class="col-1"></div>
+        <div class="col-md-5">
+          <div class="card" style="width:300px">
+            <img src="./img/M1.jpg" class="card-img-top" alt="mobile" width="" height="">
+            <div class="card-body">
+              <h5 class="card-title">Poco M2 Pro</h5>
+              <p class="card-text">
+                POCO M2 Pro (Green and Greener, 64 GB) (4 GB RAM)4 GB RAM 64 GB  
+              </p>
+              <a href="/" class="btn btn-primary btn-block d-flex
+justify-content-center"><i class="fa fa-eye"> View More</i></a>
+            </div>
+          </div>
+        </div><br>
+
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <div class="card" style="width:300px">
+            <img src="./img/M2.jpg" class="card-img-top" alt="mobile" width="" height="">
+            <div class="card-body">
+              <h5 class="card-title">Samsung M31</h5>
+              <p class="card-text">
+                Samsung Galaxy M31 has AMOLED display. It measures 159.2 mm x 75.1
+              </p>
+              <a href="/" class="btn btn-primary btn-block d-flex
+justify-content-center"><i class="fa fa-eye"> View More</i></a>
+            </div>
+          </div>
+        </div>
+      </div><br>
+
+
+      <div class="row my-3 brand">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <div class="card" style="width:300px">
+            <img src="./img/M3.jpg" class="card-img-top" alt="mobile" width="" height="">
+            <div class="card-body">
+              <h5 class="card-title">Poco M2 Pro</h5>
+              <p class="card-text">
+                Vivo y20G(Green and Greener, 64 GB) (4 GB RAM)4 GB RAM 64 GB  
+              </p>
+              <a href="/" class="btn btn-primary btn-block d-flex
+justify-content-center"><i class="fa fa-eye"> View More</i></a>
+            </div>
+          </div>
+        </div><br>
+
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <div class="card" style="width:300px">
+            <img src="./img/M4.jpg" class="card-img-top" alt="mobile" width="" height="">
+            <div class="card-body">
+              <h5 class="card-title">Oppo A12</h5>
+              <p class="card-text">
+                Oppo 12 black 32 gp,has AMOLED display. It measures 159.2 mm x 75.1 new models
+              </p>
+              <a href="/" class="btn btn-primary btn-block d-flex
+justify-content-center"><i class="fa fa-eye"> View More</i></a>
+            </div>
+          </div>
+        </div><br>
+      </div>
+    </div>
+  </main>
+  <!--------end main------->
+
+  <section>
+    <div class="container">
+      <h4 class="stack" id="stack">Stacks</h4>
+      <div class="allskills">
+        <h2>Samsung</h2>
+        <div class="skill">
+          <div class="skill_percent samsung">
+            <div class="skill_view">
+              90%
+            </div>
+          </div>
+        </div>
+        <br>
+
+
+        <h2>Redmi</h2>
+        <div class="skill">
+          <div class="skill_percent redmi">
+            <div class="skill_view">
+              50%
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <h2>Vivo</h2>
+        <div class="skill">
+          <div class="skill_percent vivo">
+            <div class="skill_view">
+              70%
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <h2>Oppo</h2>
+        <div class="skill">
+          <div class="skill_percent oppo">
+            <div class="skill_view">
+              30%
+            </div>
+          </div>
+        </div>
+        <br>
+
+        <h2>Apple</h2>
+        <div class="skill">
+          <div class="skill_percent apple">
+            <div class="skill_view">
+              80%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="row my-5 help-section" id="help">
+        <div class="col-md-3 round1">
+          <i class="fa fa-bus"></i>
+          <h4>Free Delivery</h4>
+          <p>For every products give an free delivery,till Nov22</p>
+        </div>
+
+        <div class="col-md-3 round2">
+          <i class="fa fa-dollar"></i>
+          <h4>Offers</h4>
+          <p>Offers for every users and use an promcode VKSITE22</p>
+        </div>
+
+        <div class="col-md-3 round3">
+          <i class="fa fa-info"></i>
+          <h4>24×7</h4>
+          <p>Our teams help 24hours,for your questions</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+
+          <p><i class="fa fa-map-marker -alt me-2"></i>No 22 VK Area<br>
+            Tirunelveli,vgl</p>
+
+          <p><i class="fa fa-phone me-2"></i>+918969053678</p>
+
+          <p><a href="/" class="sup"><i class="fa fa-envelope me-2"></i>Supportvk@gmail.com</a></p>
+
+          <form>
+            <div class="input-group">
+              <input type="text" name="help" class="form-control" placeholder="Personal chat">
+              <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-md-7">
+          <div class="about" id="about">
+            <h4>About for our company</h4>
+            <p>Our company has 100% trused All Mobiles are grandity for 1year,We are Working 10years on this field all
+              company mobiles are purchases here!</p>
+          </div>
+        </div>
+        <p class="copyrights text-muted">&copy;All updated and reserved by Vk</p>
+        <a href="#top"><i class="fa fa-angle-double-up"
+            style="font-size:20px; background-color:red; padding:10px; color:#fff;"></i></a>
+      </div>
+  </footer>
+
+  <!-----js-------->
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+    integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+    integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+    crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
